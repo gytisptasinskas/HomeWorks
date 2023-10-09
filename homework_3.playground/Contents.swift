@@ -14,11 +14,13 @@ let period = 5
 var deposit = principal
 
 for _ in 1...period {
-    deposit += deposit * rate
+  deposit += deposit * rate
 }
 
 let profit = deposit - principal
-print("Amount of income after \(period) years will be \(profit) Eur. My total deposit will be \(deposit) Eur!")
+let formattedProfit = String(format: "%.2f", profit)
+let formattedDeposit = String(format: "%.2f", deposit)
+print("Amount of income after \(period) years will be \(formattedProfit) Eur. My total deposit will be \(formattedDeposit) Eur!")
 
 /*
  Exercise 2
