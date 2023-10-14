@@ -51,7 +51,7 @@ func isEvenNumber(_ number: Int) -> Bool {
     return number % 2 == 0
 }
 
-let testNumber = 10
+let testNumber = 5
 print("\(testNumber) is even: \(isEvenNumber(testNumber))")
 
 /*
