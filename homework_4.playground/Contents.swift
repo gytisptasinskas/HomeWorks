@@ -51,7 +51,7 @@ func isEvenNumber(_ number: Int) -> Bool {
     return number % 2 == 0
 }
 
-let testNumber = 10
+let testNumber = 5
 print("\(testNumber) is even: \(isEvenNumber(testNumber))")
 
 /*
@@ -78,17 +78,5 @@ print(array)
  It should be 1/2 of createArray and started from [1,3,5.....
  */
 
-//var oddArray = array.filter { !isEvenNumber($0) }
-//print(oddArray)
-
-var oddArray = createArray(from: 1, to: 100)
-
-for number in oddArray {
-    if isEvenNumber(number) {
-        if let index = array.firstIndex(of: number) {
-            array.remove(at: index)
-        }
-    }
-}
-
-print(array)
+var oddArray = array.filter { !isEvenNumber($0) }
+print(oddArray)
